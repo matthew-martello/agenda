@@ -1,0 +1,21 @@
+<tr>
+  <td width='110'>$time$</td>
+  <td width='10'>
+  <td>
+    <h3>$title$</h3>
+  </td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td style='display: flex;'>
+    <h4 style='color: #ffffff; background-color: $colorHex$; padding: 2px 6px 2px 6px; border-radius: 4px;'>
+      $list$</h4>
+  </td>
+</tr>
+$location$
+<tr>
+  <td></td>
+  <td></td>
+  <td><p>$description$</p></td>
+</tr>

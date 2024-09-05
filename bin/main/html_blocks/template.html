@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matt's To Do List</title>
+<style type="text/css">
+  :root {
+    --blue: #1465fa;
+    --blue-hover: #508dff;
+    --text-color: #1f1f1f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+	body {
+		margin: 0;
+	}
+	table {
+		border-spacing: 0;
+	}
+	td {
+		padding: 0;
+	}
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    margin-top: 0px;
+    text-align: center;
+  }
+  h3 {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+  h4 {
+    margin: 0px 0px 10px 2px;
+  }
+  .wrapper {
+    width: 100%;
+    table-layout: fixed;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f0f4f9;
+  }
+  .main {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    border-spacing: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-color);
+  }
+  .footer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    border-spacing: 0;
+  }
+  .content {
+    background-color: #ffffff;
+  }
+  a:link, a:visited {
+  color: #236ade;
+  text-decoration: underline;
+  cursor: pointer;
+  }
+
+  a:link:active, a:visited:active {
+    color: #236ade;
+  }
+</style>
+</head>
+<body>
+  <center class="wrapper">
+    <table class="main" width="100%">
+      <tr>
+        <td>
+          <center>
+            <table>
+              <tr><td><h3 style="text-align: center">$day$</h3></td></tr>
+              <tr><td><h2>$date$</h2></td></tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+            </table>
+            $weather$
+            $ptv$
+          </center>
+        </td>
+      </tr>
+      <tr>
+        <td height="8"></td>
+      </tr>
+      <tr>
+        <td>
+          <centre>
+$$$
+          </centre>
+        </td>
+      </tr>
+    </table>
+    <table class="footer" width="100%">
+      <tr>
+        <td>
+          $disclaimer$
+        </td>
+      </tr>
+      <tr>
+        <td>
+          $wDisclaimer$
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>

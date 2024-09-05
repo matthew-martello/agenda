@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <center>
+      <img src="https:$icon$" width="64" height="64">
+    </center>
+  </tr>
+  <tr><td height="4"></td></tr>
+  <tr><td style="text-align: center;"><em>$conditions$</em>$suburb$</td></tr>
+  <tr><td height="12"></td></tr>
+</table>
+<table width="100%" style="text-align: center;">
+  <tr>
+    <td width="50%"><h4>Min</h4></td>
+    <td width="50%"><h4>Max</h4></td>
+  </tr>
+  <tr>
+    <td><h2>$min$</h2></td>
+    <td><h2>$max$</h2></td>
+  </tr>
+  <tr><td height="12"></td></tr>
+</table>

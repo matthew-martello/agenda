@@ -1,0 +1,4 @@
+<p style='text-align: center; margin: 30px 0px 0px 0px; font-size: smaller; color: #aaaaaa'><b>Disclaimer</b><br>The PTV
+  Timetable API Data is provided "as is" and PTV is not liable for how you use this data, how third parties use or rely
+  on this data or any errors contained within the data. You are responsible for determining whether the PTV Timetable
+  API Data is suitable for your particular usage and purposes.</p>

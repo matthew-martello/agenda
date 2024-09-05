@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="latest_departure_buffer">60</entry>
+<entry key="default_primary_alias">Personal</entry>
+<entry key="default_location">Melbourne VIC, Australia</entry>
+<entry key="timezone_offset">10</entry>
+<entry key="ptv_dev_id">3002926</entry>
+<entry key="default_calendar_colour">15</entry>
+<entry key="modern_colours">true</entry>
+</properties>
