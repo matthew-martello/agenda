@@ -76,6 +76,7 @@ public class HtmlFactory {
     
     if (weatherInfo == null) {
       html = html.replace("$weather$", "");
+      html = html.replace("$wDisclaimer$", "");
     } else {
       String weatherHtml = HtmlFactory.importHtml("src/main/resources/html_blocks/weather.txt");
 
