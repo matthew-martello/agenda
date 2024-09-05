@@ -1,11 +1,5 @@
 # Agenda - Read me
 
-## Before starting
-
-Rename `default_config.xml` to `config.xml`.
-
-Ask the developer for the necessary API keys.
-
 ## Config
 
 | Key | Type | Description | Default value |
