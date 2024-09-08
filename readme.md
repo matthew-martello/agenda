@@ -1,11 +1,5 @@
 # Agenda - Read me
 
-## Before starting
-
-Rename `default_config.xml` to `config.xml`.
-
-Ask the developer for the necessary API keys.
-
 ## Config
 
 | Key | Type | Description | Default value |
@@ -19,5 +13,5 @@ Ask the developer for the necessary API keys.
 | `default_primary_alias` | String | An alias to replace the user's email address when displaying events from their primary calendar. | Personal |
 | `default_calendar_colour` | Integer | The Google colour id of the default calendar colour. Used to assign a colour to the users tasks lists as the API does not return list colour values.<br><br>Must be a value between 1 and 24 inclusive.| 15 |
 | `modern_colours` | Boolean | Specifies what colour list to use. If set to `true`, event labels will use the modern colour list. If set to `false`, event labels will use the classic colour list. | true |
-| `latest_departure_buffer` | Integer | Specifies the minimum amount of time between the start of an event and the latest possible departure for PTV timetabling data. | 60 |
+| `latest_departure_buffer` | Integer | Specifies the minimum amount of time (in minutes) between the start of an event and the latest possible departure for PTV timetabling data. | 60 |
 | `rmit_location` | Boolean | If set to true, event locations matching the RMIT room id format will be parsed into readable text. | false |
