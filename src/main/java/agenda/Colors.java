@@ -71,14 +71,13 @@ public class Colors {
           return (!modern) ? c.classicHex : c.modernHex;
         }
       }
-    }
-
-    for (Colors c : eventColors) {
-      if (id == c.colorId) {
-        return (!modern) ? c.classicHex : c.modernHex;
+    } else {
+      for (Colors c : eventColors) {
+        if (id == c.colorId) {
+          return (!modern) ? c.classicHex : c.modernHex;
+        }
       }
     }
-    
     return "";
   }
 }

@@ -84,10 +84,14 @@ public class CalendarEvent extends AgendaItem {
         String title = event.getSummary();
         
         String color = event.getColorId();
+        String colorHex = null;
+
         if (color == null) {
           color = list.colorId;
+          colorHex = Colors.getHex(Integer.parseInt(color), true, Config.doModernColours);
+        } else {
+          colorHex = Colors.getHex(Integer.parseInt(color), false, Config.doModernColours);
         }
-        String colorHex = Colors.getHex(Integer.parseInt(color), true, Config.doModernColours);
 
         DateTime start = event.getStart().getDateTime();
         if (start == null) {

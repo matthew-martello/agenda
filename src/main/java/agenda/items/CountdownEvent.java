@@ -145,7 +145,7 @@ public class CountdownEvent extends AgendaItem {
       output += weeks + " week";
     }
     
-    if (days != 0) {
+    if (days != 0 && weeks >= 1) {
       output += ",<br>";
     }
 
