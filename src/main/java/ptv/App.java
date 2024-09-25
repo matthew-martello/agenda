@@ -267,7 +267,7 @@ public class App {
    * @param latestDepartureTime {@code DateTime} object with the start time of the first event in the EventList with PTV selected.
    * @param event Title of event to search for departures.
    * @return <p> [0] Name of station/stop.<p>[1] Earlier departure time.<p>[2] Optimal departure time.<p>[3] Later departure time.<p>
-   * [4] Title of event scheduled around.<p>[5] Start time of event.
+   * [4] Title of event scheduled around.<p>[5] Start time of event.<p>[6]Type of transport. eg: train, bus...
    */
   public static String[] getPtvInfo(String uri, DateTime latestDepartureTime, String eventTitle) {
     if (latestDepartureTime == null) {
@@ -304,7 +304,7 @@ public class App {
       }
     }
 
-    String[] ptvInfo = new String[6];
+    String[] ptvInfo = new String[7];
 
     ptvInfo[0] = getStopName(uri);
     
@@ -327,12 +327,24 @@ public class App {
 
     ptvInfo[4] = eventTitle;
     ptvInfo[5] = eventTime;
+    
+    String mode = uri.substring(uri.indexOf("route_type/") + 11);
+    mode = mode.substring(0, 1);
+    
+    ArrayList<RouteType> routeTypes = RouteType.getAllRouteTypes();
+
+    for (RouteType r : routeTypes) {
+      if (Integer.parseInt(mode) == r.id) {
+        ptvInfo[6] = r.name.toLowerCase();
+      }
+    }
 
     System.out.println("PTV:");
     System.out.println("  Departing from: " + ptvInfo[0]);
     System.out.println("  Earlier departure: " + ptvInfo[1]);
     System.out.println("  Optimal departure: " + ptvInfo[2]);
     System.out.println("  Later departure: " + ptvInfo[3]);
+    System.out.println("  Mode: " + ptvInfo[6]);
 
     return ptvInfo;
   }

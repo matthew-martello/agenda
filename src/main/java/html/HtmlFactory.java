@@ -111,6 +111,7 @@ public class HtmlFactory {
       ptvHtml = ptvHtml.replace("$start$", ptvInfo[5]);
       ptvHtml = ptvHtml.replace("$earlier$", ptvInfo[1]);
       ptvHtml = ptvHtml.replace("$later$", ptvInfo[3]);
+      ptvHtml = ptvHtml.replace("$mode$", ptvInfo[6]);
       
       html = html.replace("$ptv$", ptvHtml);
 

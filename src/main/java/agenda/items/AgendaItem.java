@@ -18,6 +18,7 @@ public abstract class AgendaItem {
   public String description;
 
   public abstract String generateTableRow();
+  public abstract String getRawLocation();
   public abstract String getSignificantLocation();
 
   /**

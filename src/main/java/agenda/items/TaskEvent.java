@@ -117,4 +117,8 @@ public class TaskEvent extends AgendaItem {
   public String getSignificantLocation() {
     return null;
   }
+
+  public String getRawLocation() {
+    return null;
+  }
 }

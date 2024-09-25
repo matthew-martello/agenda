@@ -141,11 +141,30 @@ public class App {
 
     if (Config.doPTV) {
       for (AgendaItem a : items) {
-        if (a.list.equals(ptvList) && a.start.toString().length() > 10) {
-          latestDepartureTime = a.start;
-          targetEvent = a.title;
-          break;
-        } 
+
+        System.out.println("\n" + a.title);
+
+        // If agenda item doesn't belong to the ptv list, do not get ptv information.
+        if (!a.list.equals(ptvList)) {
+          System.out.println("not in ptv list, skipping");
+          continue;
+        }
+
+        // If ptv list event is all day, do not get ptv information.
+        if (a.start.toString().length() <= 10) {
+          System.out.println("is an all day event, skipping");
+          continue;
+        }
+
+        // If no location is provided, do not get ptv information.
+        if (a.getRawLocation() == null) {
+          System.out.println("has no location, skipping");
+          continue;
+        }
+        
+        latestDepartureTime = a.start;
+        targetEvent = a.title;
+        break;
       }
     }
 

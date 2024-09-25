@@ -1,12 +1,12 @@
 <table>
   <tr>
     <td colspan=2>
-      <p style='text-align: center;'>Catch the <b>$optimal$</b> train from $station$ for $title$ at $start$.</p>
+      <p style='text-align: center;'>Catch the <b>$optimal$</b> $mode$ from $station$ for $title$ at $start$.</p>
     </td>
   </tr>
   <tr style='text-align: center;'>
-    <td>Earlier train at<br /><b>$earlier$</b></td>
-    <td>Later train at<br /><b>$later$</b></td>
+    <td>Earlier $mode$ at<br /><b>$earlier$</b></td>
+    <td>Later $mode$ at<br /><b>$later$</b></td>
   </tr>
   <tr>
     <td height='18'></td>

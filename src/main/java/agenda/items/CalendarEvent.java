@@ -163,4 +163,8 @@ public class CalendarEvent extends AgendaItem {
   public String getSignificantLocation() {
     return this.formattedAddress;
   }
+
+  public String getRawLocation() {
+    return this.location;
+  }
 }
