@@ -90,11 +90,20 @@ public class CountdownEvent extends AgendaItem {
           color = list.colorId;
         }
         String colorHex = Colors.getHex(Integer.parseInt(color), true, Config.doModernColours);
+        
+        DateTime start = event.getStart().getDateTime();
+        if (start == null) {
+          start = event.getStart().getDate();
+        }
 
-        DateTime start = event.getStart().getDate();
-        DateTime end = event.getEnd().getDate();
+        DateTime end = event.getEnd().getDateTime();
+        if (end == null) {
+          end = event.getEnd().getDate();
+        }
+
         Boolean isAllDay;
-
+        
+        // If event is set as an all day event in Google Calendar, length will be 10
         if (start.toStringRfc3339().length() == 10 && end.toStringRfc3339().length() == 10) {
           isAllDay = true;
         } else {
@@ -119,7 +128,14 @@ public class CountdownEvent extends AgendaItem {
   }
 
   public String getTimeToEvent() {
-    String eventStart = this.start.toString() + "T00:00:00.000+" + Config.getTimezoneOffsetString() + ":00";
+    String eventStart;
+
+    if (this.start.toString().length() == 10) {
+      eventStart = this.start.toString() + "T00:00:00.000+" + Config.getTimezoneOffsetString() + ":00";
+    } else {
+      eventStart = this.start.toString();
+    }
+
 
     Instant event = Instant.parse(eventStart);
 
